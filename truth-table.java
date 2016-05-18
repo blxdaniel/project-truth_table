@@ -10,15 +10,13 @@ public class TruthTable {
   private boolean isFile = false;
   private static PrintStream out = System.out;
 
-  public static final String VERSION = "1.2.2";
   
   public static void main(String[] args) {
     TruthTable table = new TruthTable();
     BufferedReader in = null;
 
-    System.out.println("TruthTable version: "+VERSION);
-    System.out.println("\nHello and welcome to Greg's Truth Table generator!"
-               +"\nVery little error checking has been built into this so"
+    System.out.println("TruthTable");
+    System.out.println("\nVery little error checking has been built into this so"
                +"\ndo try to follow these simple conventions:\n"
                +"\n-----------------------------------------------------\n"
                +"AND: ^ OR: v NOT: ~"
@@ -276,8 +274,6 @@ public class TruthTable {
         if (comeback)
           return; // can't delete ')' or it won't return
 
-        // i don't think this will ever be called... but ...
-        // yeah, too scared to remove it cause it works :-)
         prop.remove(i); // remove side effect from previous operation
         
         continue;
